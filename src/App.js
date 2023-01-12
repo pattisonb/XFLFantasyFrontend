@@ -16,8 +16,6 @@ const allPlayers = [
   // {id: '1', title: 'React Tutorial', time_hours: 10, date: new Date(2022, 11, 8)}
 ];
 
-const defaultUser = {id: 1000, username: "null", password: "null"}
-
 
 const url = 'http://localhost:8080'
 
