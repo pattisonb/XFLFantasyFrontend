@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Table from 'react-bootstrap/Table';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 
 function AddButton(props) {
@@ -9,7 +8,7 @@ function AddButton(props) {
         props.onAddHandler(props.player.id)
     };
     
-    if (props.player.team_id == 0) {
+    if (props.player.team_id === 0) {
         return (
             <Button onClick={onAddHandler} className="btn btn-success">Add</Button>
         )

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import { MDBInput, MDBCol } from "mdbreact";
 import './SearchBar.css'
 
 function SearchBar(props) {

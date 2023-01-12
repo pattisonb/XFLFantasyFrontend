@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import { MDBInput, MDBCol } from "mdbreact";
+import React from 'react';
 import './SearchBar.css'
 
 function PositionPicker(props) {
-
-    const [searchTerm, setSearchTerm] = useState('')
 
     const setPosition = (event) => {
         props.onPositionClick(event.target.value)

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
 import DropButton from './DropButton';
 import HereButton from './HereButton';
 

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Table from 'react-bootstrap/Table';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 
 function DropButton(props) {

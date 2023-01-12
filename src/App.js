@@ -1,6 +1,4 @@
-import logo from './logo.svg';
-import React, { useState, useEffect, componentDidUpdate } from 'react';
-import Table from 'react-bootstrap/Table';
+import React, { useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import axios from "axios"
 
@@ -25,8 +23,6 @@ const url = 'http://localhost:8080'
 
 function App() {
 
-  const [user, setUser] = useState(defaultUser)
-
   const [userID, setID] = useState(1000)
 
   const [players, setPlayers] = useState(allPlayers)
@@ -43,7 +39,6 @@ function App() {
 
   const logIn = async (enteredUser) => {
     axios.get(`${url}/owners/${enteredUser.username}/${enteredUser.password}`).then((response) => {
-      setUser(response.data)
       setID(response.data.userID)
       localStorage.setItem('id', response.data.id)
       axios.get(`${url}/players/userTeam/${response.data.id}`).then((response) => {
@@ -120,7 +115,7 @@ function App() {
 
   const onPositionClick = (position) => {
     console.log(position)
-    if (position == "All") {
+    if (position === "All") {
       axios.get(`${url}/players/freeAgents`).then((response) => {
         setPlayers(response.data);
       });
@@ -133,7 +128,7 @@ function App() {
   }
 
   const setTeam = (team) => {
-    if (team == "Select a team...") {
+    if (team === "Select a team...") {
       axios.get(`${url}/players/freeAgents`).then((response) => {
         setPlayers(response.data);
       });
@@ -177,13 +172,13 @@ function App() {
   //   });
   // }, []);
 
-  if (userID == 1000) {
+  if (userID === 1000) {
     return (
       <LoginPage onLogIn = {logIn} onSignUp = {signUp}/>
     )
   }
 
-  if (userID == 1) {
+  if (userID === 1) {
     return (
       <>
       <Button onClick={logOut}>Log Out</Button>

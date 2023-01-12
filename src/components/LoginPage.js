@@ -42,7 +42,7 @@ function LoginPage(props) {
         event.preventDefault();
 
         if (enteredPassword && enteredUsername && enteredConfirmPassword && enteredTeamName) {
-                if (enteredConfirmPassword == enteredPassword) {
+                if (enteredConfirmPassword === enteredPassword) {
                 const user = {
                     username: enteredUsername,
                     password: enteredPassword,
