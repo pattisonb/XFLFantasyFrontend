@@ -17,7 +17,7 @@ const allPlayers = [
 ];
 
 
-const url = 'https://xfl-api.herokuapp.com/'
+const url = 'https://xfl-api.herokuapp.com'
 
 function App() {
 
